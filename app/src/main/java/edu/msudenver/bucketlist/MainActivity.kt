@@ -59,14 +59,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, View.OnLongClick
         }
     }
 
-    // TODO #3: populate the recycler view
+    // TODOd #3: populate the recycler view
     // this function should query the database for all of the bucket list items; then use the list to update the recycler view's adapter
     // don't forget to call "sort()" on your list so the items are displayed in the correct order
     fun populateRecyclerView() {
         val db = dbHelper.readableDatabase
         val items = mutableListOf<Item>()
         val cursor = db.query(
-            "items",
+            "bucketlist",
+            arrayOf("rowid", "description", "creation_date", "update_date", "status"),
             null,
             null,
             null,
@@ -134,8 +135,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, View.OnLongClick
                     try {
                         val db = dbHelper.writableDatabase
                         db.execSQL("""
-                            DELETE FROM items
-                            WHERE id = "$id"
+                            DELETE FROM bucketlist
+                            WHERE rowid = "$id"
                         """)
                         populateRecyclerView()
 
@@ -147,7 +148,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, View.OnLongClick
         }
 
         if (view != null) {
-            val description = view.findViewById<TextView>(R.id.itemDescription)
+            val description = view.findViewById<TextView>(R.id.itemDescription).text
             val id = view.findViewById<TextView>(R.id.itemID)
             val alertDialogBuilder = AlertDialog.Builder(this)
             alertDialogBuilder.setMessage("Are you sure you want to delete ${description}?")

@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/alexanhx/StudioProjects/bucketlist/app/src/main/res/layout/activity_create_update.xml" value="0.1796875" />
+        <entry key="..\:/Users/alexanhx/StudioProjects/bucketlist/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
+        <entry key="..\:/Users/alexanhx/StudioProjects/bucketlist/app/src/main/res/layout/item_list.xml" value="0.1796875" />
         <entry key="..\:/Users/hardw/AndroidStudioProjects/bucketlist/app/src/main/res/drawable/archived_item.xml" value="0.2165" />
         <entry key="..\:/Users/hardw/AndroidStudioProjects/bucketlist/app/src/main/res/drawable/completed_item.xml" value="0.2165" />
         <entry key="..\:/Users/hardw/AndroidStudioProjects/bucketlist/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.18" />

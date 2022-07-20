@@ -78,7 +78,7 @@ class CreateUpdateActivity : AppCompatActivity(), View.OnClickListener {
     // this function should query the database for the bucket list item identified by the given id; an item object should be returned
     fun retrieveItem(id: Int): Item {
         val cursor = db.query(
-            "items",
+            "bucketlist",
             null,
             "rowid = \"${id}\"",
             null,
